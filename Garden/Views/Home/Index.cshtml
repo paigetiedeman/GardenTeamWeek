@@ -3,12 +3,12 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Little Green Square</h1>
+<div class="sign">
+    <h1><span class="sign__word">Little Green Square</span></h1>
 </div>
+<br>
 
-
-<p>@Html.ActionLink("Plots", "Index", "Plots")</p> 
-<p>@Html.ActionLink("Squarefoots", "Index", "Squarefoots")</p>
-<p>@Html.ActionLink("Create an account", "Index", "Account")</p>
-<p>@Html.ActionLink("Logout", "Index", "Account")</p>
+<p class="btn btn-light">@Html.ActionLink("Plots", "Index", "Plots")</p> 
+<p class="btn btn-light">@Html.ActionLink("Squarefoots", "Index", "Squarefoots")</p>
+<p class="btn btn-light">@Html.ActionLink("Create an account", "Index", "Account")</p>
+<p class="btn btn-light">@Html.ActionLink("Logout", "Index", "Account")</p>
