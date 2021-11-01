@@ -11,5 +11,6 @@ namespace Garden.Models
     public int PlotId { get; set; }
     public bool NeedsWater { get; set; }
     public DateTime LastWaterDate { get; set; }
+    public virtual ApplicationUser User { get; set; }
   }
 }

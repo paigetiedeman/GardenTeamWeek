@@ -10,6 +10,16 @@
 <img src="Garden/wwwroot/img/GreenThumb.jpg">
 
 
+Project Commander - Anna Clarke
+
+Project Vice-Lieutenant - Becket StrongArm Harvey
+
+Project Espirit D'Corps - Connor "Danger" Hansen
+
+Project Scapegoat - Brandon Eads
+
+Project Pagemaster - Paige
+
 #### Team week project...
 
 #### Created By: Anna Clarke, Paige Tiedeman, Connor Hansen, Brandon Eads
