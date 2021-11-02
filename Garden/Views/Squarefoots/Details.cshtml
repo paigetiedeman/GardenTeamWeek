@@ -2,3 +2,14 @@
 @{
   Layout = "_Layout";
 }
+
+@model Garden.Models.Squarefoot
+
+<h2> Squarefoot Details </h2>
+<hr />
+<h3> @Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)
+
+
+<p>@Html.ActionLink("Back to list", "Index")</p>
+<p>@Html.ActionLink("Edit Squarefoot", "Edit", new { id = Model.SquarefootId })</p>
+<p>@Html.ActionLink("Delete Squarefoot", "Delete", new { id = Model.SquarefootId })</p>

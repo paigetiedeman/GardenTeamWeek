@@ -1,0 +1,21 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Garden.Models.Squarefoot
+
+<h2>Add a squarefoot to another plot</h2>
+
+<h4>Add a plot to this squarefoot: @Html.DisplayFor(model => model.Name)</h4>
+
+@using (Html.BeginForm())
+{
+  @Html.HiddenFor(model => model.SquarefootId)
+
+  @Html.Label("Select plot")
+  @Html.DropDownList("PlotId")
+
+  <input type="submit" value="Save" class="btn btn-light"/>
+}
+
+<p class="btn btn-light">@Html.ActionLink("Back", "Index")</p>

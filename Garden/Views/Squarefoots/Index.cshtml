@@ -2,5 +2,19 @@
 @{
   Layout = "_Layout";
 }
+@model List<Garden.Models.Squarefoot>;
 
-<h1>Meow</h1>
+<h1>Squarefoots</h1>
+
+@if (@Model.Count == 0)
+{
+  <h3>No squarefoots have been added yet!</h3>
+} 
+
+@foreach (Squarefoot squarefoot in Model)
+{
+  <li>@Html.ActionLink($"{squarefoot.Name}", "Details", new { id = squarefoot.SquarefootId })</li>
+}
+
+<p>@Html.ActionLink("Add new squarefoot", "Create")</p>
+<p>@Html.ActionLink("Home", "Index", "Home")</p>

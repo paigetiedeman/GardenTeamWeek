@@ -5,6 +5,8 @@ namespace Garden.Models
   public class Squarefoot
   { 
     public int SquarefootId { get; set; }
+
+    public string Name {get; set;}
     public int SeedId { get; set; }
     public DateTime PlantDate { get; set; }
     public DateTime HarvestDate { get; set; }

@@ -1,4 +1,20 @@
-@using Garden.Models;
 @{
   Layout = "_Layout";
 }
+
+@model Garden.Models.Squarefoot
+
+<h4> Create a new squarefoot design </h4>
+
+@using (Html.BeginForm())
+{
+  @Html.LabelFor(model => model.Name)
+  @Html.TextBoxFor(model => model.Name)
+
+  @Html.Label("Select Plot")
+  @Html.DropDownList("PlotId")
+}
+
+<input type="submit" value="Add new machine" class="btn btn-light" />
+
+<p>@Html.ActionLink("Show all your squarefoots", "Index")</p>

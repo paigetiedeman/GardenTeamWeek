@@ -22,7 +22,8 @@ Project Pagemaster - Paige
 
 #### Team week project...
 
-#### Created By: Anna Clarke, Paige Tiedeman, Connor Hansen, Brandon Eads
+#### Created By: Anna Clarke, Paige Tiedeman, Connor Hansen, Brandon Eads, Becket Harvey
+
 </div>
 
 ## Technologies Used
@@ -86,7 +87,7 @@ Base URL: `http://localhost:5000`
 ### License
 
 [MIT License](https://opensource.org/licenses/MIT)
-Copyright 2021 Anna Clarke, Paige Tiedeman, Connor Hansen, Brandon Eads
+Copyright 2021 Anna Clarke, Paige Tiedeman, Connor Hansen, Brandon Eads and Becket Harvey
 
 ## Support and contact details
 
