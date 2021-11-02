@@ -6,13 +6,13 @@
     <title>@ViewData["Title"] - Garden</title>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
     <link rel="stylesheet" href="~/scss/custom.css" />
     <link rel="stylesheet" href="~/scss/custom.css.map" />
 </head>
+
 <body>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm bg-white border-bottom box-shadow mb-3">
@@ -28,7 +28,19 @@
                             <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Plots" asp-action="Index">Plots</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Squarefoots" asp-action="Index">Squarefoots</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Seeds" asp-action="Index">Seeds</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Account" asp-action="Index">Account</a>
                         </li>
                     </ul>
                 </div>
@@ -38,8 +50,8 @@
     <div class="container body">
         <main role="main" class="pb-3">
             @RenderBody()
-            <button id="myBtn" title="Go to top">^</button>
         </main>
+            <button id="myBtn" title="Go to top">^</button>
     </div>
 
     <footer class="border-top footer bg-white text-muted">
@@ -47,5 +59,6 @@
             &copy; 2021 - Garden - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
+<script src="~/js/site.js" asp-append-version="true"></script>
 </body>
 </html>

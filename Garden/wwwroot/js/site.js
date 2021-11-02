@@ -1,115 +1,69 @@
-﻿$(document).ready(function () {
-var container = $("#clone-container");
-var scrollBox = $("#scroll-box");
-var dropPanel = $("#drop-panel");
-var tiles     = $(".tile");
-var threshold = "50%";
+﻿const tile = document.querySelector('#tile');
+const tile2 = document.querySelector('#tile2');
+const tile3 = document.querySelector('#tile3');
+const tile4 = document.querySelector('#tile4');
+const tile5 = document.querySelector('#tile5');
+const tile6 = document.querySelector('#tile6');
 
-tiles.each(function() {
 
-  var element = $(this);
-  var wrapper = element.parent();
-  var offset  = element.position();
+tile.addEventListener('dragstart', dragStart);
+tile2.addEventListener('dragstart', dragStart);
+tile3.addEventListener('dragstart', dragStart);
+tile4.addEventListener('dragstart', dragStart);
+tile5.addEventListener('dragstart', dragStart);
+tile6.addEventListener('dragstart', dragStart);
 
-  var scope = {
-    clone   : element.clone().addClass("clone").prependTo(container),
-    element : element,
-    wrapper : wrapper,
-    width   : wrapper.outerWidth(),
-    dropped : false,
-    moved   : false,
-    get x() { return getPosition(wrapper, offset).x; },
-    get y() { return getPosition(wrapper, offset).y; }
-  };
 
-  scope.draggable = createDraggable(scope);
+//text/uri-list
+function dragStart(e) {
+  e.dataTransfer.setData('text/plain', e.target.id);
+  setTimeout(() => {
+    e.target.classList.add('hide');
+  }, 0);
+  console.log('drag starts...');
+  console.log(e.target.id);
+}
 
-  element.on("mousedown touchstart", scope, startDraggable);
+const wrapper = document.querySelectorAll('#drop-panel');
+
+wrapper.forEach(panel => {
+  panel.addEventListener('dragenter', dragEnter);
+  panel.addEventListener('dragover', dragOver);
+  panel.addEventListener('dragleave', dragLeave);
+  panel.addEventListener('drop', drop);
 });
 
-// START DRAGGABLE :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-function startDraggable(event) {
-
-  var tile = event.data;
-
-  TweenLite.set(tile.element, { autoAlpha: 0 });
-  TweenLite.set(tile.clone, { x: tile.x, y: tile.y, autoAlpha: 1 });
-
-  tile.draggable.startDrag(event.originalEvent);
+function dragEnter(e) {
+  e.preventDefault();
+  e.target.classList.add('drag-over');
 }
 
-// CREATE DRAGGABLE ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-function createDraggable(tile) {
+function dragOver(e) {
+  e.preventDefault();
+  e.target.classList.add('drag-over');
 
-  var clone   = tile.clone;
-  var wrapper = tile.wrapper;
-
-  tile.draggable = new Draggable(clone, {
-    onPress   : setActive,
-    onDrag    : collapseSpace,
-    onRelease : dropTile
-  });
-
-  return tile.draggable;
-  ///////
-
-  function setActive() {
-    TweenLite.to(clone, 0.15, { scale: 1.2, autoAlpha: 0.75 });
-  }
-
-  function collapseSpace() {
-    if (!tile.moved) {
-      if (!this.hitTest(wrapper)) {
-        tile.moved = true;
-        TweenLite.to(wrapper, 0.3, { width: 0 });
-      }
-    }
-  }
-
-  function dropTile() {
-    var className = undefined;
-
-    if (this.hitTest(dropPanel, threshold) && !tile.dropped) {
-      dropPanel.append(wrapper);
-      tile.dropped = true;
-      className = "+=dropped";
-    } 
-
-    moveBack(tile, className);
-  }
 }
 
-// MOVE BACK :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-function moveBack(tile, className) {
+function dragLeave(e) {
+  e.target.classList.remove('drag-over');
 
-  var clone   = tile.clone;
-  var element = tile.element;
-  var wrapper = tile.wrapper;
-
-  TweenLite.to(wrapper, 0.2, { width: tile.width });
-  TweenLite.to(clone, 0.3, { scale: 1, autoAlpha: 1, x: tile.x, y: tile.y, onComplete: done });
-
-  if (className) TweenLite.to([element, clone], 0.3, { className: className });
-
-  function done() {
-    tile.moved = false;
-    TweenLite.set(clone, { autoAlpha: 0 });
-    TweenLite.set(element, { autoAlpha: 1 });
-  }
 }
 
-// GET POSITION ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-function getPosition(wrapper, offset) {
+function drop(e) {
+  e.target.classList.remove('drag-over');
 
-  var position1 = wrapper.offset();
-  var position2 = container.offset();
+  const id = e.dataTransfer.getData('text/plain');
+  console.log(id);
+  const draggable = document.getElementById(id);
 
-  return {
-    x: position1.left - position2.left + offset.left,
-    y: position1.top  - position2.top  + offset.top
-  };
+  e.target.appendChild(draggable);
+  
+  draggable.classList.remove('hide');
+  e.dataTransfer.clearData();
+
+
+  console.log('drag droppppping');
 }
-});
 
 $(document).ready(function () {
   $(window).scroll(function () {

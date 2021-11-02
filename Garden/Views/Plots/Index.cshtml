@@ -1,9 +1,9 @@
-@using Garden.Models;
 @{
   Layout = "_Layout";
 }
+@using Garden.Models;
 
-<h2>Here's your Plot: </h2>
+<h2>Here's your Plot: </h>
 
 <div class="plot">
   <section id="top-bar">
@@ -12,79 +12,22 @@
         <div id="tile-container">
 
           <div class="tile-wrapper">
-            <div draggable= "true" class="tile">Tomatoes</div>
+            <div draggable= "true" id="tile" class = "tile">Tomatoes</div>
           </div>
           <div class="tile-wrapper">
-            <div draggable= "true" class="tile">Cabbage</div>
+            <div draggable= "true" id="tile2" class ="tile">Cabbage</div>
           </div>
           <div class="tile-wrapper">
-            <div draggable= "true" class="tile">Corn</div>
+            <div draggable= "true" id="tile3" class ="tile">Corn</div>
           </div>
           <div class="tile-wrapper">
-            <div draggable= "true" class="tile">Zucchini</div>
+            <div draggable= "true" id="tile4" class ="tile">Zucchini</div>
           </div>
           <div class="tile-wrapper">
-            <div draggable= "true" class="tile">Cucumber</div>
+            <div draggable= "true" id="tile5" class ="tile">Cucumber</div>
           </div>
-          <div class="tile-wrapper">
-            <div draggable= "true" class="tile">Pumpkin</div>
-          </div>
-          <div class="tile-wrapper">
-            <div draggable= "true" class="tile">G</div>
-          </div>
-          <div class="tile-wrapper">
-            <div draggable= "true" class="tile">H</div>
-          </div>
-          <div class="tile-wrapper">
-            <div draggable= "true" class="tile">I</div>
-          </div>
-          <div class="tile-wrapper">
-            <div draggable= "true" class="tile">J</div>
-          </div>
-          <div class="tile-wrapper">
-            <div draggable= "true" class="tile">K</div>
-          </div>
-          <div class="tile-wrapper">
-            <div draggable= "true" class="tile">L</div>
-          </div>
-          <div class="tile-wrapper">
-            <div draggable= "true" class="tile">M</div>
-          </div>
-          <div class="tile-wrapper">
-            <div draggable= "true" class="tile">N</div>
-          </div>
-          <div class="tile-wrapper">
-            <div draggable= "true" class="tile">O</div>
-          </div>
-          <div class="tile-wrapper">
-            <div draggable= "true" class="tile">P</div>
-          </div>
-          <div class="tile-wrapper">
-            <div draggable= "true" class="tile">Q</div>
-          </div>
-          <div class="tile-wrapper">
-            <div draggable= "true" class="tile">R</div>
-          </div>
-          <div class="tile-wrapper">
-            <div draggable= "true" class="tile">S</div>
-          </div>
-          <div class="tile-wrapper">
-            <div draggable= "true" class="tile">T</div>
-          </div>
-          <div class="tile-wrapper">
-            <div draggable= "true" class="tile">U</div>
-          </div>
-          <div class="tile-wrapper">
-            <div draggable= "true" class="tile">W</div>
-          </div>
-          <div class="tile-wrapper">
-            <div draggable= "true" class="tile">X</div>
-          </div>
-          <div class="tile-wrapper">
-            <div draggable= "true" class="tile">Y</div>
-          </div>
-          <div class="tile-wrapper">
-            <div draggable= "true" class="tile">Z</div>
+          <div class="tile-wrapper"> 
+            <div draggable= "true" id="tile6" class ="tile">Pumpkin</div>
           </div>
 
         </div>
@@ -92,7 +35,9 @@
     </div>
   </section>
   <section class="content"></section>
-  <section id="drop-panel">
+  <div id="drop-panel">
     <h3>DRAG ITEMS HERE</h3>
-  </section>
+  </div>
 </div>
+
+<p class="btn btn-light">@Html.ActionLink("Add Plot", "Create")</p>

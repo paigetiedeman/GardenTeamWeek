@@ -42,7 +42,7 @@ namespace Garden.Controllers
     {
       _db.Plots.Add(plot);
       _db.SaveChanges();
-      return RedirectToAction("Index");
+      return RedirectToAction("Details");
     }
 
     public ActionResult Details(int id)
