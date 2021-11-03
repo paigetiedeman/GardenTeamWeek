@@ -22,7 +22,7 @@ namespace Garden.Controllers
       List<Seed> model = _db.Seeds.ToList();
       return View(model);
     }
-    public async Task<ActionResult> Create()
+    public ActionResult Create()
     {
       return View();
     }
