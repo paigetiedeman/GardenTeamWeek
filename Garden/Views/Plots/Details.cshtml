@@ -46,17 +46,6 @@
     @{ int sqFeet = @Model.Width * @Model.Length; }
     @for(int i = 1; i <= sqFeet; i++)
     {
-      @*
-      let newdiv = document.createElement('div');
-      newdiv.id = increment ID somehow then assign 
-      newdiv.className = 'draggable';
-      let p3 = document.createElement('p');
-      p3.textContent = 'SeedName';
-      newdiv.appendChild(p3);
-
-      document.body.appendChild(div)
-      *@
-      
       <div id="div@i" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
     }
   </div>

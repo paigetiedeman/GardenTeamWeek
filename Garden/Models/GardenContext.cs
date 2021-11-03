@@ -12,5 +12,5 @@ namespace Garden.Models
 
     public GardenContext(DbContextOptions<GardenContext> options) : base(options) { }
 
-}
+  }
 }

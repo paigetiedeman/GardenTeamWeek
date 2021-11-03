@@ -7,7 +7,7 @@
 [![MIT License][license-shield]][license-url]
 
 <!--  title image below: -->
-<img src="Garden/wwwroot/img/GreenThumb.jpg">
+<img src="Garden/wwwroot/img/GreenThumb.png">
 
 
 Project Commander - Anna Clarke
