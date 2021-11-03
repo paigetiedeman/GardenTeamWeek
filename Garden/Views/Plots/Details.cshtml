@@ -12,26 +12,26 @@
 <div class="plot">
   <section id="top-bar">
     <div id="clone-container">
-      <div id="scroll-box">
+      <div id="scroll-box" ondragover="allowDrop(event)" ondrop="returnSeed(event)">
         <div id="tile-container">
 
           <div class="tile-wrapper">
-            <div draggable= "true" id="tile" class = "tile">Tomatoes</div>
+            <div draggable= "true" id="tile" class = "tile" ondragstart="drag(event)">Tomatoes</div>
           </div>
           <div class="tile-wrapper">
-            <div draggable= "true" id="tile2" class ="tile">Cabbage</div>
+            <div draggable= "true" id="tile2" class ="tile" ondragstart="drag(event)">Cabbage</div>
           </div>
           <div class="tile-wrapper">
-            <div draggable= "true" id="tile3" class ="tile">Corn</div>
+            <div draggable= "true" id="tile3" class ="tile" ondragstart="drag(event)">Corn</div>
           </div>
           <div class="tile-wrapper">
-            <div draggable= "true" id="tile4" class ="tile">Zucchini</div>
+            <div draggable= "true" id="tile4" class ="tile" ondragstart="drag(event)">Zucchini</div>
           </div>
           <div class="tile-wrapper">
-            <div draggable= "true" id="tile5" class ="tile">Cucumber</div>
+            <div draggable= "true" id="tile5" class ="tile" ondragstart="drag(event)">Cucumber</div>
           </div>
           <div class="tile-wrapper"> 
-            <div draggable= "true" id="tile6" class ="tile">Pumpkin</div>
+            <div draggable= "true" id="tile6" class ="tile" ondragstart="drag(event)">Pumpkin</div>
           </div>
 
         </div>
@@ -41,9 +41,27 @@
   <section class="content"></section>
   <div id="drop-panel">
     <h3>DRAG ITEMS HERE</h3>
-    <h4>@Model.Width X @Model.Length X @Model.Depth </h4>
+    <h4>@Model.Width X @Model.Length X @Model.Depth </h4> 
+
+    @{ int sqFeet = @Model.Width * @Model.Length; }
+    @for(int i = 1; i <= sqFeet; i++)
+    {
+      @*
+      let newdiv = document.createElement('div');
+      newdiv.id = increment ID somehow then assign 
+      newdiv.className = 'draggable';
+      let p3 = document.createElement('p');
+      p3.textContent = 'SeedName';
+      newdiv.appendChild(p3);
+
+      document.body.appendChild(div)
+      *@
+      
+      <div id="div@i" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    }
   </div>
 </div>
+
 
 <div class="behind">
 <h4>Sun Needed: @Model.Sun</h4>
@@ -51,6 +69,7 @@
 
 <h4>Hardiness: @Model.Hardiness</h4>
 <h4>Plot Size: @Model.Width X @Model.Length X @Model.Depth</h4>
+
 
 
 <p class="btn btn-light">@Html.ActionLink("Edit this Plot", "Edit", new { id = Model.PlotId }, new { @class = "ButtonText" })</p>

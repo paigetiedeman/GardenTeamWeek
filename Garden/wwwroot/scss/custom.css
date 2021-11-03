@@ -105,7 +105,7 @@ h1 {
 }
 
 #drop-panel {
-  min-height: 400px;
+  min-height: 300px;
   background: #53310a;
   padding: 10px;
   margin: 10px;
@@ -117,6 +117,15 @@ h1 {
 #drop-panel h3 {
   color: white;
   padding-left: 10px;
+}
+
+#drop-panel div {
+  position: relative;
+  height: 90px;
+  width: 90px;
+  border: 1px dashed gray;
+  display: inline-block;
+  margin: 0;
 }
 
 .content {
@@ -176,21 +185,20 @@ h1 {
   padding: 5px;
 }
 
-.tile.clone {
-  position: absolute;
-  opacity: 0;
-  visibility: hidden;
-}
-
-.tile.dropped {
-  background: green;
+.dragged {
+  background-color: green;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 10px;
+  font-size: 18px;
 }
 
 #myBtn {
   display: none;
   position: fixed;
-  bottom: 10px;
-  right: 30px;
+  bottom: 80px;
+  right: 20px;
   z-index: 99;
   border: none;
   outline: none;
