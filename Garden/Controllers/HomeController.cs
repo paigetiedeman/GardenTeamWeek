@@ -28,6 +28,11 @@ namespace Garden.Controllers
         {
             return View();
         }
+        public IActionResult LearningZone()
+        {
+            
+            return View();
+        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

@@ -1,14 +1,15 @@
 <div align="center">
 
+
+<!--  title image below: -->
+<img src="Garden/wwwroot/img/GreenThumb.png">
+
 [![Language][language-shield]][language-url]
 [![Language][languageH-shield]][languageH-url]
 [![Language][languageC-shield]][languageC-url]
 [![Language][languageS-shield]][languageS-url]
+[![Language][languageJ-shield]][languageJ-url]
 [![MIT License][license-shield]][license-url]
-
-<!--  title image below: -->
-<img src="Garden/wwwroot/img/GreenThumb.jpg">
-
 
 Project Commander - Anna Clarke
 
@@ -108,3 +109,5 @@ Copyright 2021 Anna Clarke, Paige Tiedeman, Connor Hansen, Brandon Eads and Beck
 [LanguageC-url]: https://developer.mozilla.org/en-US/docs/Web/CSS
 [LanguageS-shield]: https://img.shields.io/badge/Language-SCSS-ff69b4
 [LanguageS-url]: https://sass-lang.com/documentation
+[LanguageJ-shield]: https://img.shields.io/badge/Language-JavaScript-yellow
+[LanguageJ-url]: https://sass-lang.com/documentation
