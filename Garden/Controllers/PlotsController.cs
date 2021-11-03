@@ -33,7 +33,6 @@ namespace Garden.Controllers
       var userId = this.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
       var currentUser = await _userManager.FindByIdAsync(userId);
       var userItems = _db.Plots.Where(entry => entry.User.Id == currentUser.Id).ToList();
-
       return View();
     }
 
@@ -47,9 +46,10 @@ namespace Garden.Controllers
 
     public ActionResult Details(int id)
     {
-      var thisPlot = _db.Plots;
+      var thisPlot = _db.Plots.FirstOrDefault(model => model.PlotId == id);
       return View(thisPlot);
     }
+
     [Authorize]
     public ActionResult Edit(int id)
     {

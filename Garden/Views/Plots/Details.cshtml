@@ -2,23 +2,57 @@
   Layout = "_Layout";
 }
 
-@* @model Garden.Models.Plot;
+@model Garden.Models.Plot
 
-<h2>@Model.Name</h2>
 
-@if (@Model.Count == 0)
-{
-  <p>This plot has no tags.</p>
-}
-else
-{
-<h4>Sun: @Model.Sun</h4>
-<h5><em>Soil: @Model.Soil</em></h5>
+<h2>@Html.DisplayFor(model => model.Name)</h2>
+
+<h2>Here's your Plot: </h2>
+
+<div class="plot">
+  <section id="top-bar">
+    <div id="clone-container">
+      <div id="scroll-box">
+        <div id="tile-container">
+
+          <div class="tile-wrapper">
+            <div draggable= "true" id="tile" class = "tile">Tomatoes</div>
+          </div>
+          <div class="tile-wrapper">
+            <div draggable= "true" id="tile2" class ="tile">Cabbage</div>
+          </div>
+          <div class="tile-wrapper">
+            <div draggable= "true" id="tile3" class ="tile">Corn</div>
+          </div>
+          <div class="tile-wrapper">
+            <div draggable= "true" id="tile4" class ="tile">Zucchini</div>
+          </div>
+          <div class="tile-wrapper">
+            <div draggable= "true" id="tile5" class ="tile">Cucumber</div>
+          </div>
+          <div class="tile-wrapper"> 
+            <div draggable= "true" id="tile6" class ="tile">Pumpkin</div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="content"></section>
+  <div id="drop-panel">
+    <h3>DRAG ITEMS HERE</h3>
+    <h4>@Model.Width X @Model.Length X @Model.Depth </h4>
+  </div>
+</div>
+
+<div class="behind">
+<h4>Sun Needed: @Model.Sun</h4>
+<h5><em>Soil Type: @Model.Soil</em></h5>
 
 <h4>Hardiness: @Model.Hardiness</h4>
 <h4>Plot Size: @Model.Width X @Model.Length X @Model.Depth</h4>
 
-}
 
 <p class="btn btn-light">@Html.ActionLink("Edit this Plot", "Edit", new { id = Model.PlotId }, new { @class = "ButtonText" })</p>
-<p class="btn btn-light">@Html.ActionLink("Delete this Plot", "Delete", new { id = Model.PlotId}, new { @class = "ButtonText"})</p> *@
+<p class="btn btn-light">@Html.ActionLink("Delete this Plot", "Delete", new { id = Model.PlotId}, new { @class = "ButtonText"})</p>
+</div>

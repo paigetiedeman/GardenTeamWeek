@@ -2,8 +2,23 @@
   Layout = "_Layout";
 }
 @using Garden.Models;
+@model List<Garden.Models.Plot>
 
-<h2>Here's your Plot: </h>
+<div class="behind">
+@if(@Model.Count() == 0)
+{
+  <h3>You have no plots!</h3>
+}
+else
+{
+  <h2>Plots</h2>
+  @foreach(Plot plot in Model)
+  {
+    <p>@Html.ActionLink($"{plot.Name}", "Details", new { id = plot.PlotId }, new { @class = "ButtonText" })</p>
+  }
+}
+<!-- <h2>Here's your Plot: </h2>
+
 
 <div class="plot">
   <section id="top-bar">
@@ -38,6 +53,9 @@
   <div id="drop-panel">
     <h3>DRAG ITEMS HERE</h3>
   </div>
-</div>
+</div> -->
+
 
 <p class="btn btn-light">@Html.ActionLink("Add Plot", "Create")</p>
+<!-- <p class="btn btn-light">@Html.ActionLink("See Plots", "Details")</p> -->
+</div>
