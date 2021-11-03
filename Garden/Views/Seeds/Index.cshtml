@@ -1,6 +1,32 @@
-@using Garden.Models;
 @{
   Layout = "_Layout";
 }
 
-<h1>Aloha</h1>
+@using Garden.Models
+@model IEnumerable<Garden.Models.Seed>
+
+<h3>@User.Identity.Name's Seeds</h3>
+
+@if (Model.Any())
+{
+  @foreach (Seed seed in Model)
+  {
+    <div class = "card-deck">
+      <div class="card text-center mb-3" style="width: 24rem;">
+        <div class="card-body">
+        <h5 class="card-title">@Html.ActionLink($"{seed.SeedName}", "Details", new { id = seed.SeedId})</h5>
+          <p class="card-text" style="color:grey;">Sprouts in @seed.DaysTillSprout days</p>
+            <div class="card-footer text-muted">
+              Water Interval: @seed.WaterInterval
+          </div>
+        </div>
+      </div>
+    </div>
+  }
+}
+else
+{
+  <p>You have no seeds yet.</p>
+}
+
+<p class="btn btn-light">@Html.ActionLink("Add a Seed", "Create", null, null, new { @class="ButtonText"})</p>

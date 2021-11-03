@@ -84,6 +84,7 @@ Base URL: `http://localhost:5000`
 ## Known Bugs
 
 * API is hosted locally
+* Drag and drop stack on top of each other
 
 ### License
 
