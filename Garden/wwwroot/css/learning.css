@@ -1,0 +1,106 @@
+@import url(https://fonts.googleapis.com/css?family=Akronim);
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+
+.left-side {
+  height: auto;
+  width: 200px;
+  position: relative;
+  float: left;
+  margin-left: -300px;
+  border-radius: 15px 50px 30px;
+  background: #73AD21;
+  z-index: auto;
+  text-align: center;
+  color: black;
+}
+
+.main-side {
+  position: relative;
+  top: 50px;
+  padding-top: 5px;
+  z-index: auto;
+  border-radius: 15px 50px 30px;
+  background: #73AD21;
+  padding: 20px;
+  width: 1000px;
+  height: auto;
+  color: black;
+}
+
+.right-side {
+  height: auto;
+  width: 200px;
+  position: relative;
+  float: right;
+  margin-right: -200px;
+  border-radius: 15px 50px 30px;
+  background: #73AD21;
+  z-index: auto;
+  text-align: center;
+  color: black;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  margin-top: 80px;
+}
+
+h1 {
+  color: #f7cfc8;
+  font-family: "Staatliches", cursive;
+  font-size: 100px;
+  letter-spacing: 10px;
+  text-align: center;
+  text-shadow: -6px -6px #4d84c8, -5px -5px #4d84c8,
+    -4px -4px #4d84c8, -3px -3px #4d84c8, -2px -2px #4d84c8,
+    -1px -1px #4d84c8, 1px 1px #4d84c8, 2px 2px #4d84c8,
+    3px 3px #4d84c8, 4px 4px #4d84c8, 5px 5px #4d84c8,
+    6px 6px #4d84c8, 7px 7px #4d84c8, 8px 8px #4d84c8,
+    9px 9px #4d84c8, 10px 10px #4d84c8, 11px 11px #4d84c8,
+    12px 12px #4d84c8, 13px 13px #4d84c8, 14px 14px #4d84c8,
+    15px 15px #4d84c8, 16px 16px #4d84c8, 17px 17px #4d84c8,
+    18px 18px #4d84c8, 19px 19px #4d84c8, 20px 20px #4d84c8,
+    21px 21px #4d84c8, 22px 22px #4d84c8, 23px 23px #4d84c8,
+    24px 24px #4d84c8, 25px 25px #4d84c8, 26px 26px #4d84c8,
+    27px 27px #4d84c8, 25px 25px #4d84c8, 28px 28px #4d84c8,
+    29px 29px #4d84c8, 30px 30px #4d84c8, 31px 31px #4d84c8,
+    32px 32px #4d84c8, 33px 33px #4d84c8, 34px 34px #4d84c8,
+    35px 35px #4d84c8, 36px 36px #4d84c8, 37px 37px #4d84c8,
+    38px 38px #4d84c8, 39px 39px #4d84c8, 40px 40px;
+  width: 100%;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px; /* Vertically center the text there */
+}
+
+#myBtn {
+  display: none; 
+  position: fixed; 
+  bottom: 80px; 
+  right: 20px; 
+  z-index: 99; 
+  border: none; 
+  outline: none; 
+  background-color: #e6a543; 
+  cursor: pointer; 
+  padding: 16px; 
+  border-radius: 10px; 
+  font-size: 20px; 
+  color: white;
+}
+
+header {
+  color: grey;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}

@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Garden.Migrations
 {
     [DbContext(typeof(GardenContext))]
-    [Migration("20211103160857_Initial")]
-    partial class Initial
+    [Migration("20211103204023_ZipZone")]
+    partial class ZipZone
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -92,13 +92,11 @@ namespace Garden.Migrations
                     b.Property<int>("Depth")
                         .HasColumnType("int");
 
-                    b.Property<int>("Hardiness")
-                        .HasColumnType("int");
-
                     b.Property<int>("Length")
                         .HasColumnType("int");
 
                     b.Property<string>("Name")
+                        .IsRequired()
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
                     b.Property<string>("Privacy")
@@ -116,11 +114,48 @@ namespace Garden.Migrations
                     b.Property<int>("Width")
                         .HasColumnType("int");
 
+                    b.Property<int>("ZipCode")
+                        .HasMaxLength(5)
+                        .HasColumnType("int");
+
                     b.HasKey("PlotId");
 
                     b.HasIndex("UserId");
 
                     b.ToTable("Plots");
+                });
+
+            modelBuilder.Entity("Garden.Models.Seed", b =>
+                {
+                    b.Property<int>("SeedId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<string>("Companions")
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.Property<int>("DaysTillHarvest")
+                        .HasColumnType("int");
+
+                    b.Property<int>("DaysTillSprout")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Enemies")
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.Property<string>("SeedName")
+                        .IsRequired()
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.Property<int>("SqFootPlant")
+                        .HasColumnType("int");
+
+                    b.Property<int>("WaterInterval")
+                        .HasColumnType("int");
+
+                    b.HasKey("SeedId");
+
+                    b.ToTable("Seeds");
                 });
 
             modelBuilder.Entity("Garden.Models.Squarefoot", b =>

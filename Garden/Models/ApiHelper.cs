@@ -1,5 +1,6 @@
 using System.Threading.Tasks;
 using RestSharp;
+using System;
 
 namespace Garden.Models
 {
@@ -7,12 +8,12 @@ namespace Garden.Models
   {
     public static async Task<string> Get(int zipcode)
     {
-      RestClient client = new RestClient("http://localhost:5004/api");
-      RestRequest request = new RestRequest($"zipcode", Method.GET);
+      RestClient client = new RestClient("https://localhost:5004/api");
+      RestRequest request = new RestRequest($"ZipZones?zipcode={zipcode}", Method.GET);
       var response = await client.ExecuteTaskAsync(request);
       return response.Content;
     }
   }
 }
 
-//api/zipzone?zipcode=39485
+//api/ZipZone?zipcode=97035

@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Garden.Migrations
 {
-    public partial class Initial : Migration
+    public partial class ZipZone : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -45,6 +45,25 @@ namespace Garden.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_AspNetUsers", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Seeds",
+                columns: table => new
+                {
+                    SeedId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    SeedName = table.Column<string>(type: "longtext CHARACTER SET utf8mb4", nullable: false),
+                    SqFootPlant = table.Column<int>(type: "int", nullable: false),
+                    DaysTillHarvest = table.Column<int>(type: "int", nullable: false),
+                    WaterInterval = table.Column<int>(type: "int", nullable: false),
+                    DaysTillSprout = table.Column<int>(type: "int", nullable: false),
+                    Companions = table.Column<string>(type: "longtext CHARACTER SET utf8mb4", nullable: true),
+                    Enemies = table.Column<string>(type: "longtext CHARACTER SET utf8mb4", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Seeds", x => x.SeedId);
                 });
 
             migrationBuilder.CreateTable(
@@ -159,10 +178,10 @@ namespace Garden.Migrations
                 {
                     PlotId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    Name = table.Column<string>(type: "longtext CHARACTER SET utf8mb4", nullable: true),
+                    Name = table.Column<string>(type: "longtext CHARACTER SET utf8mb4", nullable: false),
                     Sun = table.Column<string>(type: "longtext CHARACTER SET utf8mb4", nullable: true),
                     Soil = table.Column<string>(type: "longtext CHARACTER SET utf8mb4", nullable: true),
-                    Hardiness = table.Column<int>(type: "int", nullable: false),
+                    ZipCode = table.Column<int>(type: "int", maxLength: 5, nullable: false),
                     Width = table.Column<int>(type: "int", nullable: false),
                     Length = table.Column<int>(type: "int", nullable: false),
                     Depth = table.Column<int>(type: "int", nullable: false),
@@ -273,6 +292,9 @@ namespace Garden.Migrations
 
             migrationBuilder.DropTable(
                 name: "Plots");
+
+            migrationBuilder.DropTable(
+                name: "Seeds");
 
             migrationBuilder.DropTable(
                 name: "Squarefoots");

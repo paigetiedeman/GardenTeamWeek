@@ -4,7 +4,7 @@
 
 @using Garden.Models
 @model IEnumerable<Garden.Models.Seed>
-
+<div class="behind">
 <h3>@User.Identity.Name's Seeds</h3>
 
 @if (Model.Any())
@@ -30,3 +30,4 @@ else
 }
 
 <p class="btn btn-light">@Html.ActionLink("Add a Seed", "Create", null, null, new { @class="ButtonText"})</p>
+</div>

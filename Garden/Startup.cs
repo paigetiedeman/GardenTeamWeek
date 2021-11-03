@@ -11,6 +11,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using Microsoft.AspNetCore.Mvc.NewtonsoftJson;
 using Garden.Models;
 
 namespace Garden
@@ -30,6 +33,10 @@ namespace Garden
 
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddControllersWithViews()
+            .AddNewtonsoftJson(options =>
+            options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
+            );
             services.AddMvc();
 
             services.AddEntityFrameworkMySql()
@@ -68,9 +75,11 @@ namespace Garden
 
             app.UseAuthorization();
 
-            app.UseEndpoints(routes =>
+            app.UseEndpoints(endpoints =>
             {
-                routes.MapControllerRoute("default", "{controller=Home}/{action=Index}/{id?}");
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller=Home}/{action=Index}/{id?}");
             });
 
             app.UseStaticFiles();

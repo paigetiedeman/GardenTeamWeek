@@ -55,8 +55,9 @@
 <div class="behind">
 <h4>Sun Needed: @Model.Sun</h4>
 <h5><em>Soil Type: @Model.Soil</em></h5>
-
-<h4>Hardiness: @Model.Hardiness</h4>
+<!-- Where we connect to api and transmit zipcode to hardiness zone -->
+<h4>ZipCode: @Model.ZipCode</h4>
+<h4>Hardiness Zone: @ViewBag.thisZipZone.Zone</h4>
 <h4>Plot Size: @Model.Width X @Model.Length X @Model.Depth</h4>
 
 

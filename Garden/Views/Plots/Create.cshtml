@@ -29,8 +29,8 @@
     new SelectListItem { Text = "Loamy", Value = "Loamy" }
     }, new { @class = "form-control" })
   <br>
-  <h4>@Html.LabelFor(model => model.Hardiness) Zone</h4> //Link to Uncle Ted's Learning Shed
-  @Html.TextBoxFor(model => model.Hardiness, new { @class = "form-control", @type = "number"})
+  <h4>@Html.Label("Zipcode")</h4> 
+  @Html.TextBoxFor(model => model.ZipCode, new { @class = "form-control", @type = "number"})
   <br>
   <h4>@Html.LabelFor(model => model.Width) </h4>
   @Html.TextBoxFor(model => model.Width, new { @class = "form-control", @type = "number", @placeholder="Width in feet"})

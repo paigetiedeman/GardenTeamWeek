@@ -9,8 +9,8 @@ namespace Garden.Models
     public string Name { get; set; }
     public string Sun { get; set; }
     public string Soil { get; set; }
-    [Range(1, 11, ErrorMessage = "Please enter a number between 1-11")]
-    public int Hardiness { get; set; }
+    [Range(0, 99999, ErrorMessage = "Please enter a valid 5-digit Zipcode")]
+    public int ZipCode { get; set; }
     [Required]
     public int Width { get; set; }
     [Required]

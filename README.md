@@ -96,8 +96,8 @@ Copyright 2021 Anna Clarke, Paige Tiedeman, Connor Hansen, Brandon Eads and Beck
 * [Anna Clarke](https://github.com/)
 * [Paige Tiedeman](github.com/paigetiedeman) 
 * [Becket Harvey](https://github.com/)
-* [Brandon Eads](https://github.com/)
 * [Connor Hansen](https://github.com/)
+* [Brandon Eads](https://github.com/)
 
 
 [license-shield]: https://img.shields.io/badge/License-MIT-blue
