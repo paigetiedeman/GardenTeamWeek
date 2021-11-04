@@ -16,7 +16,7 @@
   <h4>@Html.TextBoxFor(model => model.SqFootPlant, new { @class = "form-control", @type = "number"})</h4>
   <br>
   <h4>@Html.Label("Days Until Harvest")</h4>
-  @Html.TextBoxFor(model => model.DaysTillHarvest, new { @class = "form-control", @placeholder = "1x a Week"})
+  @Html.TextBoxFor(model => model.DaysTillHarvest, new { @class = "form-control", @type = "number" })
   <br>
   <h4>@Html.Label("Water Interval")</h4> 
   @Html.TextBoxFor(model => model.WaterInterval, new { @class = "form-control", @placeholder = "1x a Week"})

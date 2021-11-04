@@ -37,10 +37,6 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="LearningZone">Learning Zone</a>
-                        </li>
                         <li class="nav-item">
                             <a class="nav-link" asp-area="" asp-controller="Account" asp-action="Index">Account</a>
                         </li>
@@ -49,20 +45,13 @@
             </div>
         </nav>
     </header>
-    <div class="container body">
+    <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
-        </main>
-            <div class="main-side"> Check out the leaflets to learn more about each topic!
-            <ul>Hardiness Zones
-            </ul>
-            </div>
-            <div class="left-side"><h6>Hardiness Zones</h6>
-                <p><a href="https://www.fs.fed.us/wildflowers/Native_Plant_Materials/Native_Gardening/hardinesszones.shtml">here</a></p></div>
-            <div class="right-side" >Uncle Ted Memorial Nameplate</div>
-            <button id="myBtn" title="Go to top">^</button>
     </div>
+        <button id="myBtn" title="Go to top">^</button>
 
+        </main>
     <footer class="border-top footer bg-white text-muted">
         <div class="container">
             &copy; 2021 - Garden - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>

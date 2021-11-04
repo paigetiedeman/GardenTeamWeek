@@ -1,43 +1,61 @@
 @import url(https://fonts.googleapis.com/css?family=Akronim);
 @import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
 
-.left-side {
+body {
+  background-image:url(../img/Uncle_Ted.jpg);
+  text-align: center;
+}
+
+#leaf-grid{
+  margin-top: 30px;
+}
+
+#left-side, #left-side2, #left-side3, #left-side4 {
   height: auto;
-  width: 200px;
-  position: relative;
+  width: 350px;
+  padding: 12px;
   float: left;
-  margin-left: -300px;
   border-radius: 15px 50px 30px;
   background: #73AD21;
   z-index: auto;
   text-align: center;
   color: black;
+  grid-area: sidebar;
+  box-sizing: border-box;
+  display: block;
+  margin: 8px;
+  margin-right: 10px;
 }
 
 .main-side {
-  position: relative;
-  top: 50px;
-  padding-top: 5px;
-  z-index: auto;
-  border-radius: 15px 50px 30px;
+  margin-left: 10px;
+  padding-top: 10px;
+  border-radius: 50px 50px 50px;
   background: #73AD21;
-  padding: 20px;
-  width: 1000px;
+  width: auto;
   height: auto;
   color: black;
+  float: left;
+  padding: 30px;
+  margin-bottom: 80px;
+  /* display: block; */
+  box-sizing: border-box;
 }
 
-.right-side {
+#right-side, #right-side2, #right-side3, #right-side4 {
+  /* display: none; */
   height: auto;
-  width: 200px;
-  position: relative;
-  float: right;
-  margin-right: -200px;
+  width: 300px;
+  float: left;
   border-radius: 15px 50px 30px;
   background: #73AD21;
   z-index: auto;
   text-align: center;
   color: black;
+  grid-area: sidebar;
+  box-sizing: border-box;
+  /* display: block; */
+  margin: 8px;
 }
 
 .main {
@@ -88,7 +106,7 @@ h1 {
   z-index: 99; 
   border: none; 
   outline: none; 
-  background-color: #e6a543; 
+  background-color: #f7cfc8;
   cursor: pointer; 
   padding: 16px; 
   border-radius: 10px; 
@@ -103,4 +121,22 @@ header {
   width: 100%;
   margin-bottom: 20px;
   padding-bottom: 20px;
+}
+
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+  color: grey;
+}
+
+.nav-link {
+  color: grey;
+  font-size: 20px;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  color: grey;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
 }

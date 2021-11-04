@@ -2,3 +2,20 @@
 @{
   Layout = "_Layout";
 }
+
+@model Garden.Models.Seed
+<div class="behind">
+<h4>Are you sure you want to delete this?</h4>
+
+<br>
+<p>Seed: @Html.DisplayFor(model => model.SeedName)</p>
+
+@using (Html.BeginForm())
+{
+  <br>
+  <input type="submit" value="Delete" class="btn btn-light ButtonText"/>
+}
+
+<br>
+<p class="btn btn-light">@Html.ActionLink("Back to Seeds", "Index", null, null, new { @class = "ButtonText"})</p>
+</div>
