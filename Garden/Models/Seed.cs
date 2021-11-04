@@ -18,16 +18,16 @@ namespace Garden.Models
     public string SeedName { get; set; }
     public int SqFootPlant { get; set; }
     public int DaysTillHarvest { get; set; }
-    public int WaterInterval { get; set; }
+    public string WaterInterval { get; set; }
     public int DaysTillSprout { get; set; }
     public string Companions { get; set; }
     public string Enemies { get; set; }
     public string Notes { get; set;}
     public string Zone { get; set;}
 
-    public Seed(int seedid, string seedname, int daystillharvest, int waterinterval,
-               int daystillsprout, string companions, string enemies, string notes,
-               string zone)
+    public Seed(int seedid, string seedname, int daystillharvest, string waterinterval,
+              int daystillsprout, string companions, string enemies, string notes,
+              string zone)
     {
       SeedId = seedid;
       SeedName = seedname;

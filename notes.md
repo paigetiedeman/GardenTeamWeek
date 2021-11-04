@@ -8,7 +8,7 @@ THURSDAY:
 - Seed Data??
 - Presentation
   - Project Pitch (MVP): Becket or Anna?
-  - MVC Demo (JS DragnDrop, log in, add seeds): 
+  - MVC Demo (JS DragNDrop, log in, add seeds): 
   - API Demo- Connor?
   - Technologies used - all y'all 
   - Stretch Goals/Lessons
