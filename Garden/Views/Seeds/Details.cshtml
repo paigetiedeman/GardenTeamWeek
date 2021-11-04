@@ -1,8 +1,8 @@
-@using Garden.Models;
 @{
   Layout = "_Layout";
 }
+@model Garden.Models.Seed;
 
 <div class="behind">
-  
+  <h1>@Html.DisplayFor(model => model.SeedName)</h1>
 </div>

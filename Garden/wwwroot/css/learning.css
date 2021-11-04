@@ -12,7 +12,8 @@ body {
 
 #left-side, #left-side2, #left-side3, #left-side4 {
   height: auto;
-  width: 300px;
+  width: 350px;
+  padding: 12px;
   float: left;
   border-radius: 15px 50px 30px;
   background: #73AD21;
@@ -23,9 +24,11 @@ body {
   box-sizing: border-box;
   display: block;
   margin: 8px;
+  margin-right: 10px;
 }
 
 .main-side {
+  margin-left: 10px;
   padding-top: 10px;
   border-radius: 50px 50px 50px;
   background: #73AD21;
@@ -35,12 +38,12 @@ body {
   float: left;
   padding: 30px;
   margin-bottom: 80px;
-  display: block;
+  /* display: block; */
   box-sizing: border-box;
 }
 
 #right-side, #right-side2, #right-side3, #right-side4 {
-  display: none;
+  /* display: none; */
   height: auto;
   width: 300px;
   float: left;
@@ -54,8 +57,6 @@ body {
   /* display: block; */
   margin: 8px;
 }
-
-
 
 .main {
   display: flex;
@@ -105,7 +106,7 @@ h1 {
   z-index: 99; 
   border: none; 
   outline: none; 
-  background-color: #4d84c8; 
+  background-color: #f7cfc8;
   cursor: pointer; 
   padding: 16px; 
   border-radius: 10px; 
