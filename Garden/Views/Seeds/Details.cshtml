@@ -1,8 +1,30 @@
 @{
   Layout = "_Layout";
 }
-@model Garden.Models.Seed;
 
-<div class="behind">
-  <h1>@Html.DisplayFor(model => model.SeedName)</h1>
-</div>
+
+<h1>Seed Info:</h1>
+<ul>
+    @* <li>ID: @Model.SeedId</li>
+    <li>User: @Model.SeedName</li>
+    <li>Country: @Model.Country</li>
+    <li>City: @Model.City</li>
+    <li>Date: @Model.Date</li>
+    <li>Rating: @Model.Rating</li> *@
+</ul>
+<br>
+
+<a href="/Seeds/Edit/@(Model.SeedId)"><p>Edit</p></a>
+<br>
+
+<a href="/Seeds"><p>Return</p></a>
+
+    @* public int SeedId { get; set; }
+    [Required]
+    public string SeedName { get; set; }
+    public int SqFootPlant { get; set; }
+    public int DaysTillHarvest { get; set; }
+    public int WaterInterval { get; set; }
+    public int DaysTillSprout { get; set; }
+    public string Companions { get; set; }
+    public string Enemies { get; set; } *@
