@@ -8,38 +8,39 @@
 
 <div class="row" id="leaf-grid">
   <div class="col-md-4">
-      <div id="left-side">
+      <div id="left-side" style="display: none;">
         <h6>Hardiness Zones</h6>
         <p>Hardiness Zones are how gardeners recognize if a plant will thrive in a given location. They are based on certain climate conditions. Check out a map <a href="https://www.fs.fed.us/wildflowers/Native_Plant_Materials/Native_Gardening/hardinesszones.shtml">here!</a> Our app will also give you hardiness zones based on your zip code!</p>
       </div>
-      <div id="left-side2">
+      
+      <div id="left-side2" style="display: none;"> 
         <h6>Composting</h6> 
         <p>Composting is the process of turning waste into effective soil enhancing material. This
         <a href="https://www.planetnatural.com/composting-101/making/how-it-works/">link </a>explains the process in a step by step guide for beginners!</p>
       </div>
-    <div id="left-side3"><h6>Soil Types</h6>
-      <p>Soil isn't just good for ruining everything I ever worked for in my life Stacy you gd homewrecking temptress. It's also full of nutrients plants need to survive, just like how I can't go on without you Stacy I love you so much.<a href="https://learn.eartheasy.com/articles/know-your-garden-soil-how-to-make-the-most-of-your-soil-type/"> Please Stacy come home</a></p>
+    <div id="left-side3" style="display: none;"><h6>Soil Types</h6>
+      <p>Soil is more than dirt! It's full of nutrients plants need to survive. <a href="https://learn.eartheasy.com/articles/know-your-garden-soil-how-to-make-the-most-of-your-soil-type/"> Learn about soil types here!</a></p>
     </div>
-    <div id="left-side4"><h6> Companion/Enemy Plants</h6>
-    <p><a href="https://www.almanac.com/companion-planting-chart-vegetables">Companion</a> plants are plants that grow well together, like you KNOW we did Stacy. Enemy plants are plants that stab you straight through the heart after SIX YEARS TOGETHER.
-    <a href="https://www.dominion-seed-house.com/upload/Le%20compagnonnage_EN.pdf">This chart</a> is a great guide(I was a great guy(duh) once too you frigid ice queen)</p></div>
+    <div id="left-side4" style="display: none;"><h6> Companion/Enemy Plants</h6>
+    <p><a href="https://www.almanac.com/companion-planting-chart-vegetables">Companion</a> plants are plants that grow well together, like peanut butter and jelly, but far less delicious.
+    <a href="https://www.dominion-seed-house.com/upload/Le%20compagnonnage_EN.pdf">This chart</a> is a great guide.</p></div>
+        <div id="right-side" style="display: none;"><h6>Insects</h6><p>Insects can be a great pal or a garden-ruining nuisance! <a href="https://www.gardentech.com/blog/pest-id-and-prevention/identifying-good-and-bad-bugs-in-your-garden-infographic"> Read this to figure out which bugs help or hurt!</a></p></div>
+    <div id="right-side2" style="display: none;"><h6>Pruning & Thinning</h6><p>Pruning helps direct your seeds growth, while thinning prevents overcrowding of your plot! <a href="https://simplifygardening.com/pruning-vs-thinning/">This guide</a></p>will help teach you when and how to do both.</div>
+    <div id="right-side3" style="display: none;"><h6>Cloches</h6><p>Cloches are creative protective exteriors to help plants grow and keep them safe! <a href="https://www.diyncrafts.com/117912/home/gardening/20-garden-cloche-ideas-to-protect-your-plants-many-upcycled-ideas">Learn to make your own here!</a></p></div>
+    <div id="right-side4" style="display: none;"><h6>Is it time to plant?</h6><p>There's no easy answer on when to plant. It can be a complicated decision! Fortunately <a href="https://www.almanac.com/vegetable-gardening-for-beginners">this guide </a>will help you figure out the right time for you.</p></div>
   </div>
   <div class="col-md-4 main-side"> 
     <h4>Check out the leaflets to learn more about each topic!</h4>
-      <p>Hardiness Zones</p>
-      <p>Composting</p>
-      <p>Soil Types</p>
-      <p>Companion & Enemy Plants</p>
-      <p>Insects: Friends and Foes</p>
-      <p>Pruning/Thinning Seedlings</p>
-      <p>The hell is a cloche Anna. Do I need to hit up nordstrom for my plants?!</p>
-      <p>So When Do We PLANT?!</p>
-  </div>
-  <div class="col-md-4">
-    <div id="right-side"><h6>Insects</h6><p>Insects are little things that can cause BIG problems, like when you don't feel comfortable with something but you try it anyway and then it turns out it was a bit traumatic but you think your girl will support you and WHERE WERE YOU WHEN I NEEDED YOU STACE?! Anyway <a href="https://www.gardentech.com/blog/pest-id-and-prevention/identifying-good-and-bad-bugs-in-your-garden-infographic"> Read this and don't make my mistakes</a></p></div>
-    <div id="right-side2"><h6>Pruning & Thinning</h6><p><a href="https://simplifygardening.com/pruning-vs-thinning/"><strong>*Bitter sobbing*</strong></a></p></div>
-    <div id="right-side3"><h6>Ross - dress (plants) for less</h6><p><a href="https://www.diyncrafts.com/117912/home/gardening/20-garden-cloche-ideas-to-protect-your-plants-many-upcycled-ideas"> *numerous sounds of cans clanking* Where the hell did I leave the rest of it...</a></p></div>
-    <div id="right-side4"><h6>Is it time to plant?</h6><p><a href="https://www.almanac.com/vegetable-gardening-for-beginners">Just read this man.</a> Don't make the same mistakes I made. When you start your garden, make sure you start it vegetables you know and trust. Every garden deserves love, and so do you. You'll find it someday, like a seed finds the sun. You may have to lay in the cold wet ground, but you'll blossom eventually too. Just don't give up.</p></div>
+    <div class ="buttons">
+      <p><a class="btn btn-light" href="#" onclick="divVisibility('left-side');">Hardiness Zones</a></p>
+      <p><a class="btn btn-light" href="#" onclick="divVisibility('left-side2');">Composting</a></p>
+      <p><a class="btn btn-light" href="#" onclick="divVisibility('left-side3');">Soil Types</a></p>
+      <p><a class="btn btn-light" href="#" onclick="divVisibility('left-side4');">Companion & Enemy Plants</a></p>
+      <p><a class="btn btn-light" href="#" onclick="divVisibility('right-side');">Insects: Friends and Foes</a></p>
+      <p><a class="btn btn-light" href="#" onclick="divVisibility('right-side2');">Pruning/Thinning Seedlings</a></p>
+      <p><a class="btn btn-light" href="#" onclick="divVisibility('right-side3');">Cloche Your Plants</a></p>
+      <p><a class="btn btn-light" href="#" onclick="divVisibility('right-side4');">When to Plant?</a></p>
+    </div>
   </div>
 </div>
 

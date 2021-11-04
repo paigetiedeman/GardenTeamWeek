@@ -19,9 +19,9 @@
   @Html.TextBoxFor(model => model.DaysTillHarvest, new { @class = "form-control", @type = "number" })
   <br>
   <h4>@Html.Label("Water Interval")</h4> 
-  @Html.TextBoxFor(model => model.WaterInterval, new { @class = "form-control", @placeholder = "1x a Week"})
+  @Html.TextBoxFor(model => model.WaterInterval, new { @class = "form-control", @type = "number", @placeholder = "1"})
   <br>
-  <h4>@Html.LabelFor(model => model.DaysTillSprout) </h4>
+  <h4>@Html.Label("Days Until Sprout")</h4>
   @Html.TextBoxFor(model => model.DaysTillSprout, new { @class = "form-control", @type = "number", @placeholder="Expected Sprout Day"})
   <br>
   <h4>@Html.LabelFor(model => model.Companions)</h4>
@@ -29,6 +29,12 @@
   <br>
   <h4>@Html.LabelFor(model => model.Enemies)</h4>
   @Html.TextBoxFor(model => model.Enemies, new { @class = "form-control", @type = "text", @placeholder="Cabbage"})
+  <br>
+  <h4>@Html.LabelFor(model => model.Notes)</h4>
+  @Html.TextBoxFor(model => model.Notes, new { @class = "form-control", @type = "text", @placeholder="This plant requires xyz."})
+  <br>
+  <h4>@Html.LabelFor(model => model.Zone)</h4>
+  @Html.TextBoxFor(model => model.Zone, new { @class = "form-control", @type = "text", @placeholder="1, 2, 3, 4, etc."})
   <br>
   <input type="submit" value="Add New Seed" class="btn btn-light"/>
 }

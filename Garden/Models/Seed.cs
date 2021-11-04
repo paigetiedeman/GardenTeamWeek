@@ -25,7 +25,8 @@ namespace Garden.Models
     public string Notes { get; set;}
     public string Zone { get; set;}
 
-    public Seed(int seedid, string seedname, int daystillharvest, string waterinterval,
+
+    public Seed(int seedid, string seedname, int daystillharvest, int waterinterval,
               int daystillsprout, string companions, string enemies, string notes,
               string zone)
     {
@@ -58,6 +59,25 @@ namespace Garden.Models
       Seed seed= JsonConvert.DeserializeObject<Seed>(jsonResponse.ToString());
       return seed;
     }
+
+    public static void Post(Seed seed)
+    {
+      string jsonSeed = JsonConvert.SerializeObject(seed);
+      var apiCallTask = ApiHelper.Post(jsonSeed);
+    }
+
+    public static void Put(Seed seed)
+    {
+      string jsonSeed = JsonConvert.SerializeObject(seed);
+      var apiCallTask = ApiHelper.Put(seed.SeedId, jsonSeed);
+    }
+
+    public static void Delete(int id)
+    {
+      var apiCallTask = ApiHelper.Delete(id);
+    }
+
+    
   }
 }
 

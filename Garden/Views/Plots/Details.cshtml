@@ -4,11 +4,11 @@
 
 @model Garden.Models.Plot
 
-
+<div class="behind">
 <h2>@Html.DisplayFor(model => model.Name)</h2>
 
 <h2>Here's your Plot: </h2>
-
+</div>
 <div class="plot">
   <section id="top-bar">
     <div id="clone-container">
@@ -16,24 +16,33 @@
         <div id="tile-container">
 
           <div class="tile-wrapper">
-            <div draggable= "true" id="tile" class = "tile" ondragstart="drag(event)">Tomatoes</div>
+            <div draggable= "true" id="tile" class = "tile" ondragstart="drag(event)">Tomato<br>🍅</div>
           </div>
+          <!-- 🍅🍅 -->
           <div class="tile-wrapper">
-            <div draggable= "true" id="tile2" class ="tile" ondragstart="drag(event)">Cabbage</div>
+            <div draggable= "true" id="tile2" class ="tile" ondragstart="drag(event)">Cabbage<br>🥬</div>
           </div>
+          <!-- 🥬🥬 -->
           <div class="tile-wrapper">
-            <div draggable= "true" id="tile3" class ="tile" ondragstart="drag(event)">Corn</div>
+            <div draggable= "true" id="tile7" class ="tile" ondragstart="drag(event)">Banana<br>🍌</div>
           </div>
+          <!-- 🍌🍌 -->
           <div class="tile-wrapper">
-            <div draggable= "true" id="tile4" class ="tile" ondragstart="drag(event)">Zucchini</div>
+            <div draggable= "true" id="tile3" class ="tile" ondragstart="drag(event)">Corn<br>🌽</div>
           </div>
+          <!-- 🌽🌽 -->
           <div class="tile-wrapper">
-            <div draggable= "true" id="tile5" class ="tile" ondragstart="drag(event)">Cucumber</div>
+            <div draggable= "true" id="tile4" class ="tile" ondragstart="drag(event)">Strawberry<br> 🍓</div>
           </div>
+          <!-- 🍓🍓 -->
+          <div class="tile-wrapper">
+            <div draggable= "true" id="tile5" class ="tile" ondragstart="drag(event)">Cucumber<br> 🥒</div>
+          </div>
+          <!-- 🥒🥒🥒 -->
           <div class="tile-wrapper"> 
-            <div draggable= "true" id="tile6" class ="tile" ondragstart="drag(event)">Pumpkin</div>
+            <div draggable= "true" id="tile6" class ="tile" ondragstart="drag(event)">Pumpkin<br> 🎃</div>
           </div>
-
+          <!-- 🎃🎃 -->
         </div>
       </div>
     </div>
@@ -56,8 +65,8 @@
 <h4>Sun Needed: @Model.Sun</h4>
 <h5><em>Soil Type: @Model.Soil</em></h5>
 <!-- Where we connect to api and transmit zipcode to hardiness zone -->
-<h4>ZipCode: @Model.ZipCode</h4>
-<h4>Hardiness Zone: @ViewBag.thisZipZone.Zone</h4>
+<h4>Zipcode: @Model.ZipCode</h4>
+<h4><a class="HardText" href="/Home/LearningZone">Hardiness</a> Zone: @ViewBag.thisZipZone.Zone</h4>
 <h4>Plot Size: @Model.Width X @Model.Length X @Model.Depth</h4>
 
 

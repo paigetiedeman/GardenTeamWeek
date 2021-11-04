@@ -71,3 +71,35 @@ body {
   background-color: rgba(128, 128, 128, 0.582);
   padding: 20px;
 }
+
+.PlotText {
+  color: white;
+  font-size: 24px;
+}
+
+.PlotText:hover, .SeedText:hover, .HardText:hover {
+  color: green;
+}
+
+.card {
+  background-color: #e6a543ce;
+  color: brown;
+}
+
+.SeedText {
+  color: white;
+  font-size: 24px;
+  text-transform: capitalize;
+}
+
+.HardText {
+  color: white;
+  text-decoration: underline;
+}
+
+.btn-block {
+  background-color: #c6fff1;
+  border-style: 2px outset rgba(165, 77, 42, 0.671);
+  font-size: 20px;
+  color: grey;
+}

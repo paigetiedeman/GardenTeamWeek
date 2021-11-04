@@ -1,30 +1,25 @@
 @{
   Layout = "_Layout";
 }
+@model Garden.Models.Seed;
 
-
+<div class="behind">
 <h1>Seed Info:</h1>
-<ul>
-    @* <li>ID: @Model.SeedId</li>
-    <li>User: @Model.SeedName</li>
-    <li>Country: @Model.Country</li>
-    <li>City: @Model.City</li>
-    <li>Date: @Model.Date</li>
-    <li>Rating: @Model.Rating</li> *@
-</ul>
+<hr>
+
+    <h3 class="SeedText">@Model.SeedName</h3>
+    <p>Plants Per Square Foot: @Model.SqFootPlant</p>
+    <p>Days Unil Harvest: @Model.DaysTillHarvest</p>
+    <p>Water Interval: @Model.WaterInterval</p>
+    <p>Days Until Sprout: @Model.DaysTillSprout</p>
+    <p>Companions: @Model.Companions</p>
+    <p>Enemies: @Model.Enemies</p>
+    <p>Notes: @Model.Notes</p>
+    <p>Zone: @Model.Zone</p>
+
 <br>
 
-<a href="/Seeds/Edit/@(Model.SeedId)"><p>Edit</p></a>
-<br>
-
-<a href="/Seeds"><p>Return</p></a>
-
-    @* public int SeedId { get; set; }
-    [Required]
-    public string SeedName { get; set; }
-    public int SqFootPlant { get; set; }
-    public int DaysTillHarvest { get; set; }
-    public int WaterInterval { get; set; }
-    public int DaysTillSprout { get; set; }
-    public string Companions { get; set; }
-    public string Enemies { get; set; } *@
+<p class="btn btn-light">@Html.ActionLink("Edit", "Edit", new { id = @Model.SeedId})</p>
+<p class="btn btn-light">@Html.ActionLink("Delete", "Delete", new { id = @Model.SeedId})</p>
+<p class="btn btn-light">@Html.ActionLink("Back to Seeds", "Index")</p>
+</div>

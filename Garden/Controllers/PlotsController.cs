@@ -30,6 +30,7 @@ namespace Garden.Controllers
     [Authorize]
     public async Task<ActionResult> Create()
     {
+      // ViewBag.PlotId = new SelectList(_db.Plots, "PlotId", "PlotName");
       var userId = this.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
       var currentUser = await _userManager.FindByIdAsync(userId);
       var userItems = _db.Plots.Where(entry => entry.User.Id == currentUser.Id).ToList();
@@ -41,7 +42,7 @@ namespace Garden.Controllers
     {
       _db.Plots.Add(plot);
       _db.SaveChanges();
-      return RedirectToAction("Details");
+      return RedirectToAction("Details", new {id = plot.PlotId});
     }
 
     public ActionResult Details(int id)

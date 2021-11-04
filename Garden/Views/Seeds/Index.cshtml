@@ -14,10 +14,10 @@
     <div class = "card-deck">
       <div class="card text-center mb-3" style="width: 24rem;">
         <div class="card-body">
-        <h5 class="card-title">@Html.ActionLink($"{seed.SeedName}", "Details", new { id = seed.SeedId})</h5>
-          <p class="card-text" style="color:grey;">Sprouts in @seed.DaysTillSprout days</p>
-            <div class="card-footer text-muted">
-              Water Interval: @seed.WaterInterval
+        <h5 class="card-title">@Html.ActionLink($"{seed.SeedName}", "Details", new { id = seed.SeedId}, new { @class="SeedText"})</h5>
+          <p class="card-text">Sprouts in @seed.DaysTillSprout days</p>
+            <div class="card-footer">
+              Water Interval: @seed.WaterInterval times a week
           </div>
         </div>
       </div>

@@ -6,31 +6,38 @@
 @model Garden.Models.Seed
 
 <div class="behind">
-<h3>Edit Seed: @Model.SeedName</h3>
+<h3 class="SeedText">Edit Seed: @Model.SeedName</h3>
 <hr>
 
 @using (Html.BeginForm())
 {
+  @Html.HiddenFor(model => model.SeedId)
   <h4>@Html.Label("Seed Name")</h4>
-  @Html.EditorFor(model=> model.SeedName, new { @class = "form-control" })
+  @Html.EditorFor(model=> model.SeedName, new { htmlAttributes = new { @class = "form-control" }})
   <br>
   <h4>@Html.Label("Feet Needed by Plant")</h4>
-  <h4>@Html.EditorFor(model => model.SqFootPlant, new { @class = "form-control", @type = "number"})</h4>
+  @Html.EditorFor(model => model.SqFootPlant, new { htmlAttributes = new { @class = "form-control", @type = "number"}})
   <br>
   <h4>@Html.Label("Days Until Harvest")</h4>
-  @Html.EditorFor(model => model.DaysTillHarvest, new { @class = "form-control", @placeholder = "1x a Week"})
+  @Html.EditorFor(model => model.DaysTillHarvest, new { htmlAttributes = new { @class = "form-control", @placeholder = "1x a Week"}})
   <br>
   <h4>@Html.Label("Water Interval")</h4> 
-  @Html.EditorFor(model => model.WaterInterval, new { @class = "form-control", @placeholder = "1x a Week"})
+  @Html.EditorFor(model => model.WaterInterval, new { htmlAttributes = new { @class = "form-control", @placeholder = "1"}})
   <br>
-  <h4>@Html.LabelFor(model => model.DaysTillSprout) </h4>
-  @Html.EditorFor(model => model.DaysTillSprout, new { @class = "form-control", @type = "number", @placeholder="Expected Sprout Day"})
+  <h4>@Html.Label("Days Until Sprout") </h4>
+  @Html.EditorFor(model => model.DaysTillSprout, new { htmlAttributes = new { @class = "form-control", @type = "number", @placeholder="Expected Sprout Day"}})
   <br>
   <h4>@Html.LabelFor(model => model.Companions)</h4>
-  @Html.EditorFor(model => model.Companions, new { @class = "form-control", @type = "text", @placeholder="Potatoes"})
+  @Html.EditorFor(model => model.Companions, new { htmlAttributes = new { @class = "form-control", @type = "text", @placeholder="Potatoes"}})
   <br>
   <h4>@Html.LabelFor(model => model.Enemies)</h4>
-  @Html.EditorFor(model => model.Enemies, new { @class = "form-control", @type = "text", @placeholder="Cabbage"})
+  @Html.EditorFor(model => model.Enemies, new { htmlAttributes = new { @class = "form-control", @type = "text", @placeholder="Cabbage"}})
+  <br>
+  <h4>@Html.LabelFor(model => model.Notes)</h4>
+  @Html.EditorFor(model => model.Notes, new { htmlAttributes = new { @class = "form-control", @type = "text", @placeholder="This plant requires xyz."}})
+  <br>
+  <h4>@Html.LabelFor(model => model.Zone)</h4>
+  @Html.EditorFor(model => model.Zone, new { htmlAttributes = new { @class = "form-control", @type = "text", @placeholder="1, 2, 3, 4, etc."}})
   <br>
   <input type="submit" value="Save" class="btn btn-light"/>
 }

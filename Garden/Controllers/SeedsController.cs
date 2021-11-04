@@ -4,7 +4,10 @@ using Microsoft.AspNetCore.Mvc;
 using Garden.Models;
 using System.Collections.Generic;
 using System.Linq;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using System.Threading.Tasks;
+using System.Security.Claims;
 
 
 namespace Garden.Controllers
@@ -27,13 +30,13 @@ namespace Garden.Controllers
       return View();
     }
 
-    // [HttpPost]
-    // public ActionResult Create(Seed seed)
-    // {
-    //   _db.Seeds.Add(seed);
-    //   _db.SaveChanges();
-    //   return RedirectToAction("Details");
-    // }
+    [HttpPost]
+    public IActionResult Create(Seed seed)
+    {
+      Seed.Post(seed);
+      return RedirectToAction("Details", new {id = seed.SeedId});
+    }
+
 
     public IActionResult Details(int id)
     {
@@ -41,32 +44,34 @@ namespace Garden.Controllers
       return View(model);
     }
 
-    // public ActionResult Edit(int id)
-    // {
-    //   var thisSeed = _db.Seeds.FirstOrDefault(seed => seed.SeedId == id);
-    //   return View(thisSeed);
-    // }
 
-    // [HttpPost]
-    // public ActionResult Edit(Seed seed)
-    // {
-    //   _db.Entry(seed).State = EntityState.Modified;
-    //   _db.SaveChanges();
-    //   return RedirectToAction("Index");
-    // }
-    // public ActionResult Delete(int id)
-    // {
-    //   var thisSeed = _db.Seeds.FirstOrDefault(seed => seed.SeedId == id);
-    //   return View(thisSeed);
-    // }
+    public IActionResult Edit (int id)
+    {
+      var model = Seed.GetDetails(id);
+      return View(model);
+    }
 
-    // [HttpPost, ActionName("Delete")]
-    // public ActionResult DeleteConfirmed(int id)
-    // {
-    //   var thisSeed = _db.Seeds.FirstOrDefault(seed => seed.SeedId == id);
-    //   _db.Seeds.Remove(thisSeed);
-    //   _db.SaveChanges();
-    //   return RedirectToAction("Index");
-    // }
+
+    [HttpPost]
+    public IActionResult Edit(int id, Seed seed)
+    {
+      seed.SeedId = id;
+      Seed.Put(seed);
+      return RedirectToAction("Details", new {id = seed.SeedId});
+    }
+
+    public IActionResult Delete(int id)
+    {
+      var model = Seed.GetDetails(id);
+      return View(model);
+    }
+
+
+    public IActionResult DeleteConfirmed(int id)
+    {
+      Seed.Delete(id);
+      return RedirectToAction("Index");
+    }
   }
 }
+
