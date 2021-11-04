@@ -1,85 +1,67 @@
 @import url(https://fonts.googleapis.com/css?family=Akronim);
 @import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
 
-.left-side {
-  height: auto;
-  width: 200px;
-  position: relative;
-  float: left;
-  margin-left: -600px;
-  border-radius: 15px 50px 30px;
-  background: #73AD21;
-  z-index: auto;
+body {
+  background-color: #f7cfc8;
   text-align: center;
-  color: black;
-  grid-area: main;
 }
-#left-side2, #left-side3, #left-side4 {
-  height: auto;
-  width: 200px;
-  position: relative;
+
+#leaf-grid{
+  margin-top: 30px;
+}
+
+#left-side, #left-side2, #left-side3, #left-side4 {
+  height: 100px;
+  width: 300px;
+  /* position: relative; */
   float: left;
-  margin-left: -300px;
-  margin-top: 100px;
   border-radius: 15px 50px 30px;
   background: #73AD21;
   z-index: auto;
   text-align: center;
   color: black;
-  grid-area: main;
+  grid-area: sidebar;
+  box-sizing: border-box;
+  display: block;
+  margin: 8px;
+
+  /* grid-area: main; */
 }
 
 .main-side {
-  position: relative;
-  top: 50px;
-  padding-top: 5px;
-  z-index: auto;
+  padding-top: 10px;
+  /* z-index: auto; */
   border-radius: 50px 50px 50px;
   background: #73AD21;
-  width: 1000px;
-  height: 600px;
+  width: auto;
+  height: auto;
   color: black;
-  grid-area: header;
-  padding: 8px;
+  float: left;
+  /* grid-area: header; */
+  padding: 30px;
+  margin-bottom: 80px;
+  display: block;
+  box-sizing: border-box;
 }
 
-.right-side {
+#right-side, #right-side2, #right-side3, #right-side4 {
   height: 100px;
-  width: 200px;
-  position: relative;
-  float: right;
+  width: 300px;
+  /* position: relative; */
+  float: left;
   border-radius: 15px 50px 30px;
-  background: #73AD21;
+  /* background: #73AD21; */
+  background: grey;
   z-index: auto;
   text-align: center;
   color: black;
   grid-area: sidebar;
+  box-sizing: border-box;
+  display: block;
+  margin: 8px;
 }
 
-#right-side2, #right-side3, #right-side4 {
-  height: 100px;
-  width: 200px;
-  position: relative;
-  float: right;
-  border-radius: 15px 50px 30px;
-  background: #73AD21;
-  z-index: auto;
-  text-align: center;
-  color: black;
-  grid-area: sidebar;
-}
 
-#leaf-grid {
-  display: grid;
-  grid-template-columns: 50px 50px 50px 50px;
-  grid-template-rows: auto;
-  grid-template-areas: 
-    "main header . sidebar"
-    "main header . sidebar"
-    "main header . sidebar"
-    "main header . sidebar";
-
-}
 
 .main {
   display: flex;

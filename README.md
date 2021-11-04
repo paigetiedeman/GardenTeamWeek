@@ -1,7 +1,5 @@
 <div align="center">
 
-
-<!--  title image below: -->
 <img src="Garden/wwwroot/img/GreenThumb.png">
 
 [![Language][language-shield]][language-url]
