@@ -3,14 +3,16 @@ using System;
 using Garden.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Garden.Migrations
 {
     [DbContext(typeof(GardenContext))]
-    partial class GardenContextModelSnapshot : ModelSnapshot
+    [Migration("20211104030848_GardenDevInitial")]
+    partial class GardenDevInitial
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -140,9 +142,6 @@ namespace Garden.Migrations
                     b.Property<string>("Enemies")
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
-                    b.Property<string>("Notes")
-                        .HasColumnType("longtext CHARACTER SET utf8mb4");
-
                     b.Property<string>("SeedName")
                         .IsRequired()
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
@@ -152,9 +151,6 @@ namespace Garden.Migrations
 
                     b.Property<int>("WaterInterval")
                         .HasColumnType("int");
-
-                    b.Property<string>("Zone")
-                        .HasColumnType("longtext CHARACTER SET utf8mb4");
 
                     b.HasKey("SeedId");
 

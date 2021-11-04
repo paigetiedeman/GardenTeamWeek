@@ -29,19 +29,13 @@ namespace Garden.Models
     {
       var apiCallTask = ApiHelper.Get(zipcode);
       var result = apiCallTask.Result;
-      Console.WriteLine("+++++++++++++++++++++++++++++++++++++++++");
-      if(result != null)
-      {
-      JObject jsonResponse = JsonConvert.DeserializeObject<JObject>(result);
-      ZipZone zipzone = JsonConvert.DeserializeObject<ZipZone>(jsonResponse.ToString());
+      JArray jsonResponse = JsonConvert.DeserializeObject<JArray>(result);
+      List<ZipZone> zipzoneList = JsonConvert.DeserializeObject<List<ZipZone>>(jsonResponse.ToString());
 
-      Console.WriteLine("Result is Null");
-      return zipzone;
-      }
-      Console.WriteLine("8888888888888888888888888888888888888888888");
-      return new ZipZone(1, 00000, 0);
+      return zipzoneList[0];
     }
   }
 }
+
 
 

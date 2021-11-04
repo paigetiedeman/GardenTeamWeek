@@ -47,7 +47,6 @@ namespace Garden.Controllers
     public ActionResult Details(int id)
     {
       var thisPlot = _db.Plots.FirstOrDefault(model => model.PlotId == id);
-      // make an api call using thisPlot.ZipCode as the search parameter?
       int zipcode = thisPlot.ZipCode;
       ViewBag.thisZipZone = ZipZone.Get(zipcode);
 
