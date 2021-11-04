@@ -7,8 +7,8 @@ THURSDAY:
 - Hosting - Brandon
 - Seed Data??
 - Presentation
-  - Project Pitch (MVP): Becket or Anna?
-  - MVC Demo (JS DragnDrop, log in, add seeds): 
+  - Project Pitch (MVP): Brandon
+  - MVC Demo (JS DragnDrop, log in, add seeds): Becket
   - API Demo- Connor?
   - Technologies used - all y'all 
   - Stretch Goals/Lessons

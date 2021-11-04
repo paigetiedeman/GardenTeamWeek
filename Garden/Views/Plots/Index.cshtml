@@ -14,7 +14,7 @@ else
   <h2>Plots</h2>
   @foreach(Plot plot in Model)
   {
-    <p>@Html.ActionLink($"{plot.Name}", "Details", new { id = plot.PlotId }, new { @class = "ButtonText" })</p>
+    <p class="plot">@Html.ActionLink($"{plot.Name}", "Details", new { id = plot.PlotId }, new { @class = "PlotText" })</p>
   }
 }
 <br>

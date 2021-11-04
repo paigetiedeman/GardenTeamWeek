@@ -3,7 +3,7 @@
 }
 
 @using System.Security.Claims
-
+<div class="behind">
 <h2>Authentication with Identity</h2>
 <hr />
 @if (User.Identity.IsAuthenticated)
@@ -22,3 +22,4 @@ else
 }
 <br>
 <p class="btn btn-light">@Html.ActionLink("Home", "Index", "Home")</p>
+</div>

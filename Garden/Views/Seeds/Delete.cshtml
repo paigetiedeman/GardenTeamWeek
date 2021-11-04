@@ -10,8 +10,9 @@
 <br>
 <p>Seed: @Html.DisplayFor(model => model.SeedName)</p>
 
-@using (Html.BeginForm())
+@using (Html.BeginForm("DeleteConfirmed", "Seeds"))
 {
+  @Html.Hidden("id", @Model.SeedId)
   <br>
   <input type="submit" value="Delete" class="btn btn-light ButtonText"/>
 }

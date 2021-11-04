@@ -2,7 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
 
 body {
-  background-image:url(../img/Uncle_Ted.jpg);
+  background-image:url('../img/Uncle_Ted.jpg');
+  /* background-size: cover; */
+  background-attachment: fixed;
   text-align: center;
 }
 
@@ -20,7 +22,6 @@ body {
   z-index: auto;
   text-align: center;
   color: black;
-  grid-area: sidebar;
   box-sizing: border-box;
   display: block;
   margin: 8px;
@@ -38,24 +39,31 @@ body {
   float: left;
   padding: 30px;
   margin-bottom: 80px;
-  /* display: block; */
   box-sizing: border-box;
 }
 
 #right-side, #right-side2, #right-side3, #right-side4 {
-  /* display: none; */
   height: auto;
-  width: 300px;
+  width: 350px;
+  padding: 12px;
   float: left;
   border-radius: 15px 50px 30px;
   background: #73AD21;
   z-index: auto;
   text-align: center;
   color: black;
-  grid-area: sidebar;
   box-sizing: border-box;
-  /* display: block; */
+  display: block;
   margin: 8px;
+  margin-right: 10px;
+}
+
+.buttons a {
+  font-size: 16px;
+}
+.buttons a:hover {
+  cursor:pointer; 
+  font-size: 16px;
 }
 
 .main {

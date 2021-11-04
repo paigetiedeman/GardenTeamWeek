@@ -8,7 +8,8 @@
 </div>
 <br>
 
-<p class="btn btn-light">@Html.ActionLink("Plots", "Index", "Plots")</p> 
-<p class="btn btn-light">@Html.ActionLink("Squarefoots", "Index", "Squarefoots")</p>
-<p class="btn btn-light">@Html.ActionLink("Create an account", "Index", "Account")</p>
-<p class="btn btn-light">@Html.ActionLink("Logout", "Index", "Account")</p>
+<p>@Html.ActionLink("Plots", "Index", "Plots", null, new {@class= "btn btn-block btn-light"})</p> 
+<p>@Html.ActionLink("Seeds", "Index", "Seeds", null, new {@class= "btn btn-block btn-light"})</p>
+<!-- <p class="btn btn-block btn-light">@Html.ActionLink("Squarefoots", "Index", "Squarefoots")</p> -->
+<p>@Html.ActionLink("Create an Account", "Index", "Account", null, new {@class= "btn btn-block btn-light"})</p>
+<p>@Html.ActionLink("Logout", "Index", "Account", null, new {@class= "btn btn-block btn-light"})</p>
