@@ -2,3 +2,37 @@
 @{
   Layout = "_Layout";
 }
+
+@model Garden.Models.Seed
+
+<div class="behind">
+<h3>Edit Seed: @Model.SeedName</h3>
+<hr>
+
+@using (Html.BeginForm())
+{
+  <h4>@Html.Label("Seed Name")</h4>
+  @Html.EditorFor(model=> model.SeedName, new { @class = "form-control" })
+  <br>
+  <h4>@Html.Label("Feet Needed by Plant")</h4>
+  <h4>@Html.EditorFor(model => model.SqFootPlant, new { @class = "form-control", @type = "number"})</h4>
+  <br>
+  <h4>@Html.Label("Days Until Harvest")</h4>
+  @Html.EditorFor(model => model.DaysTillHarvest, new { @class = "form-control", @placeholder = "1x a Week"})
+  <br>
+  <h4>@Html.Label("Water Interval")</h4> 
+  @Html.EditorFor(model => model.WaterInterval, new { @class = "form-control", @placeholder = "1x a Week"})
+  <br>
+  <h4>@Html.LabelFor(model => model.DaysTillSprout) </h4>
+  @Html.EditorFor(model => model.DaysTillSprout, new { @class = "form-control", @type = "number", @placeholder="Expected Sprout Day"})
+  <br>
+  <h4>@Html.LabelFor(model => model.Companions)</h4>
+  @Html.EditorFor(model => model.Companions, new { @class = "form-control", @type = "text", @placeholder="Potatoes"})
+  <br>
+  <h4>@Html.LabelFor(model => model.Enemies)</h4>
+  @Html.EditorFor(model => model.Enemies, new { @class = "form-control", @type = "text", @placeholder="Cabbage"})
+  <br>
+  <input type="submit" value="Save" class="btn btn-light"/>
+}
+
+</div>
