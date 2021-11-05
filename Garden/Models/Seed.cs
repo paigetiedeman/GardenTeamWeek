@@ -18,7 +18,7 @@ namespace Garden.Models
     public string SeedName { get; set; }
     public int SqFootPlant { get; set; }
     public int DaysTillHarvest { get; set; }
-    public string WaterInterval { get; set; }
+    public int WaterInterval { get; set; }
     public int DaysTillSprout { get; set; }
     public string Companions { get; set; }
     public string Enemies { get; set; }

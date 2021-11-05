@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Garden.Migrations
 {
-    public partial class ZipZone : Migration
+    public partial class Initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -59,7 +59,9 @@ namespace Garden.Migrations
                     WaterInterval = table.Column<int>(type: "int", nullable: false),
                     DaysTillSprout = table.Column<int>(type: "int", nullable: false),
                     Companions = table.Column<string>(type: "longtext CHARACTER SET utf8mb4", nullable: true),
-                    Enemies = table.Column<string>(type: "longtext CHARACTER SET utf8mb4", nullable: true)
+                    Enemies = table.Column<string>(type: "longtext CHARACTER SET utf8mb4", nullable: true),
+                    Notes = table.Column<string>(type: "longtext CHARACTER SET utf8mb4", nullable: true),
+                    Zone = table.Column<string>(type: "longtext CHARACTER SET utf8mb4", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -181,7 +183,7 @@ namespace Garden.Migrations
                     Name = table.Column<string>(type: "longtext CHARACTER SET utf8mb4", nullable: false),
                     Sun = table.Column<string>(type: "longtext CHARACTER SET utf8mb4", nullable: true),
                     Soil = table.Column<string>(type: "longtext CHARACTER SET utf8mb4", nullable: true),
-                    ZipCode = table.Column<int>(type: "int", maxLength: 5, nullable: false),
+                    ZipCode = table.Column<int>(type: "int", nullable: false),
                     Width = table.Column<int>(type: "int", nullable: false),
                     Length = table.Column<int>(type: "int", nullable: false),
                     Depth = table.Column<int>(type: "int", nullable: false),

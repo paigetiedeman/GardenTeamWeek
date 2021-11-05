@@ -150,8 +150,8 @@ namespace Garden.Migrations
                     b.Property<int>("SqFootPlant")
                         .HasColumnType("int");
 
-                    b.Property<string>("WaterInterval")
-                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+                    b.Property<int>("WaterInterval")
+                        .HasColumnType("int");
 
                     b.Property<string>("Zone")
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
